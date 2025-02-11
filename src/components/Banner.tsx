@@ -20,6 +20,13 @@ export default function Banner() {
     console.log(`Banner atual: ${currentBanner}`);
   }, [currentBanner]);
 
+  // Banner links
+  const bannerLinks = [
+    "/novidades",
+    "/promocoes",
+    "/vender",
+  ];
+
   return (
     <main className="flex flex-col ">
 
@@ -84,7 +91,7 @@ export default function Banner() {
           </Link>
 
           {/* Banner Central */}
-          <div className="bg-white bg-cover bg-center flex items-center justify-center w-[600px] h-auto"> 
+          <Link href={bannerLinks[currentBanner - 1]} className="bg-white bg-cover bg-center flex items-center justify-center w-[600px] h-auto"> 
             <Image
               src={`/banner${currentBanner}.png`} // Variando entre 1, 2 e 3
               alt={`Banner ${currentBanner}`} // Para ajudar a verificar qual banner está sendo exibido
@@ -92,7 +99,7 @@ export default function Banner() {
               height={200}
               className="transition-opacity duration-1000 ease-in-out rounded-lg object-cover"
             />
-          </div>
+          </Link>
 
           {/* Banner Direita */}
           <div className="banner-right flex flex-col w-[350px] gap-3">
