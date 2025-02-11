@@ -1,18 +1,9 @@
-import Header from '@/components/Header';
-import Banner from '@/components/Banner';
+import Banner from "@/components/Banner";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function HomePage() {
   return (
-    <html lang="pt-BR">
-      <body>
-        <Header />
-        <Banner />
- 
-      </body>
-    </html>
+    <div className='home-page'>
+      <Banner />
+    </div>
   );
 }

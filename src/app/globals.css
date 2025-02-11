@@ -8,8 +8,29 @@
   --myred: #F75560;
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Garante que o body ocupe pelo menos a altura total da tela */
+  margin: 0;  /* Garante que não haja margem extra */
+  scroll-behavior: smooth;
+}
+
+.footer {
+  margin-top: auto; 
+}
+
+
+.footer a {
+  color: #0455DB;
+  text-decoration: none;
+  font-weight: bold;
 }

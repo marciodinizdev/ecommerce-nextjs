@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="bg-white drop-shadow-lg flex flex-col">
+    <header className="bg-white drop-shadow-md flex flex-col">
       <div className="head-sup">
         <div className="container mx-auto flex items-center justify-between p-4 w-90">
 
@@ -38,13 +38,13 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="head-inf flex justify-center bg-myred text-white p-3">
+      <div className="head-inf flex justify-center bg-white text-white p-3">
         {/* Navbar */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className="text-white hover:text-black">Home</Link>
-          <Link href="/masculino" className="text-white hover:text-black">Masculino</Link>
-          <Link href="/feminino" className="text-white hover:text-black">Feminino</Link>
-          <Link href="/promocoes" className="text-white hover:text-black">Promoções</Link>
+          <Link href="/" className="text-black hover:text-black">Home</Link>
+          <Link href="/masculino" className="text-black hover:text-black">Masculino</Link>
+          <Link href="/feminino" className="text-black hover:text-black">Feminino</Link>
+          <Link href="/promocoes" className="text-black hover:text-black">Promoções</Link>
         </nav>
       </div>
     </header>
