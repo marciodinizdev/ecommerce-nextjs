@@ -11,8 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        myred: "var(--myred)",
       },
-    },
+      
+    },fontFamily: {
+      logo: ["var(--font-sans)"],
+    }
   },
   plugins: [],
 } satisfies Config;
