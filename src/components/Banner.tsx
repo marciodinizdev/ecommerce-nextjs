@@ -20,7 +20,7 @@ export default function Banner() {
       <Image
         src={`/banner${currentBanner}.png`}
         alt="Banner"
-        width={1200}
+        width={1300}
         height={300}
         className="transition-opacity duration-1000 ease-in-out" 
       />

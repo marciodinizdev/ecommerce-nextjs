@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+// Definindo a fonte Roboto com pesos específicos
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'], // Especificando os pesos que você quer
+});
 
 export const metadata: Metadata = {
   title: "Barra Closet | Brechó Comunitário",
@@ -21,11 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Header />
 
         <main>{children}</main>
-        <Footer />  
+        <Footer />
       </body>
     </html>
   );
