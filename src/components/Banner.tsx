@@ -27,29 +27,48 @@ export default function Banner() {
       <div className="flex justify-center">
         <div className="flex flex-row gap-1 justify-center w-[1300px] h-[60px] mx-auto items-stretch">
 
-          <div className="banner-left flex flex-col w-[1300px] gap-3">
+          {/* Info esquerda */}
+          <div className="info-left flex flex-col w-[1300px] gap-3">
             <div className="font-bold bg-gray-100 text-white p-3 flex items-center justify-around text-sm sm:text-base h-full">
-              <Link href="sejavendedor" className="flex items-center gap-3 mb-1 font-bold  text-myred">
+              <Link href="sejavendedor" className="flex items-center gap-3 font-bold  text-myred">
                 <Image src="/vendedor.png" alt="Seja vendedor" width={25} height={0} />
-                <span>VENDA CONOSCO</span>
+                <div className="flex flex-col text-sm leading-tight">
+                  <span className="font-bold text-myred">VENDA CONOSCO</span>
+                  <span className="text-gray-800 font-thin">Bora desapegar?</span>
+                </div>
               </Link>
 
-              <span className="text-gray-500">|</span>
+            </div>
+          </div>
 
-              <Link href="seguranca" className="flex items-center gap-3 mb-1 font-bold  text-myred">
+          {/* Info central */}
+          <div className="info-center flex flex-col w-[1300px] gap-3">
+            <div className="font-bold bg-gray-100 text-white p-3 flex items-center justify-around text-sm sm:text-base h-full">
+              <Link href="seguranca" className="flex items-center gap-3">
                 <Image src="/seguranca.png" alt="Transações seguras" width={30} height={0} />
-                <span>TRANSAÇÃO SEGURA</span>
+                <div className="flex flex-col text-sm leading-tight">
+                  <span className="font-bold text-myred">TRANSAÇÃO SEGURA</span>
+                  <span className="text-gray-800 font-thin">Rígida política de segurança</span>
+                </div>
               </Link>
 
-              <span className="text-gray-500">|</span>
+            </div>
+          </div>
 
-              <Link href="devolucao" className="flex items- gap-3 mb-1 font-bold  text-myred">
+          {/* Info direita */}
+          <div className="info-right flex flex-col w-[1300px] gap-3">
+            <div className="font-bold bg-gray-100 text-white p-3 flex items-center justify-around text-sm sm:text-base h-full">
+
+              <Link href="devolucao" className="flex items- gap-3 font-bold  text-myred">
                 <Image src="/devolucao.png" alt="Devolução grátis" width={30} height={0} />
-                <span>DEVOLUÇÃO GRÁTIS</span>
+                <div className="flex flex-col text-sm leading-tight">
+                  <span className="font-bold text-myred">DEVOLUÇÃO GRÁTIS</span>
+                  <span className="text-gray-800 font-thin">Leia nossos termos</span>
+                </div>
               </Link>
             </div>
           </div>
-         
+
         </div>
       </div>
 
