@@ -56,10 +56,7 @@ export default function Header() {
             <Link href="/login">
               <User className="text-black hover:text-gray-500" />
             </Link>
-            <Link href="/carrinho" className="relative">
-              <ShoppingCart className="text-black hover:text-gray-500" />
-              <span className="absolute -top-2 -right-2 bg-myred text-white text-xs rounded-full px-1">3</span>
-            </Link>
+            
             <Link href="/favoritos">
               <Heart className="text-black hover:text-gray-500" />
             </Link>

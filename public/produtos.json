@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "nome": "Bota Caterpillar Masculina",
+      "precoAntigo": "R$ 299,00",
+      "precoNovo": "R$ 130,00",
+      "imagem": "/images/products/bota-caterpillar.jpg",
+      "categorias": ["calçados", "promoções"]
+    },
+    {
+      "id": 2,
+      "nome": "Moletom Colegial Sailor Moon",
+      "precoAntigo": "-",
+      "precoNovo": "R$ 69,00",
+      "imagem": "/images/products/moletom-colegial-sailor-moon.jpg",
+      "categorias": ["roupas"]
+    },
+    {
+      "id": 3,
+      "nome": "Camiseta do São Paulo",
+      "precoAntigo": "-",
+      "precoNovo": "R$ 120,00",
+      "imagem": "/images/products/camiseta-sao-paulo.jpg",
+      "categorias": ["roupas", "novidades"]
+    },
+    {
+      "id": 4,
+      "nome": "Calça Jeans Rutra",
+      "precoAntigo": "-",
+      "precoNovo": "R$ 150,00",
+      "imagem": "/images/products/calca-jeans-rutra.jpg",
+      "categorias": ["roupas", "novidades"]
+    },
+    {
+      "id": 5,
+      "nome": "Camisa Florida",
+      "precoAntigo": "R$ 55,00",
+      "precoNovo": "R$ 25,00",
+      "imagem": "/images/products/camisa-florida.jpg",
+      "categorias": ["roupas", "promoções"]
+    },
+    {
+      "id": 6,
+      "nome": "Salto Vizzano Onçinha",
+      "precoAntigo": "R$ 99,00",
+      "precoNovo": "R$ 50,00",
+      "imagem": "/images/products/salto-vizzano-oncinha.jpg",
+      "categorias": ["calçados"]
+    }
+  ]
+  
