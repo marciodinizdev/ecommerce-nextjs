@@ -85,7 +85,7 @@
       "precoAntigo": "35,00",
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/bota-infantil-preta.jpg",
-      "categorias": ["calçados", "sazonal"]
+      "categorias": ["calçados"]
     },
     {
       "id": 12,
@@ -94,6 +94,70 @@
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/havaiana-infantil.jpg",
       "categorias": ["calçados", "novidades"]
+    },
+    {
+      "id": 13,
+      "nome": "Sandália Infantil (Tam. 33)",
+      "precoAntigo": "35,00",
+      "precoNovo": "R$ 25,00",
+      "imagem": "/images/products/sandalia-menino.jpg",
+      "categorias": ["calçados", "promoções"]
+    },
+    {
+      "id": 14,
+      "nome": "Vestido Florido (Tam. GG)",
+      "precoAntigo": "-",
+      "precoNovo": "R$ 15,00",
+      "imagem": "/images/products/vestido-florido-gg.jpg",
+      "categorias": ["roupas", "novidades"]
+    },
+    {
+      "id": 15,
+      "nome": "Sapatinho de Crochê (Tam. 14)",
+      "precoAntigo": "-",
+      "precoNovo": "R$ 25,00",
+      "imagem": "/images/products/sapatinho-croche.jpg",
+      "categorias": ["calçados", "novidades"]
+    },
+    {
+      "id": 16,
+      "nome": "Tiara Maria Bonita",
+      "precoAntigo": "50,00",
+      "precoNovo": "R$ 25,00",
+      "imagem": "/images/products/tiara-maria-bonita.jpg",
+      "categorias": ["acessórios", "sazonal", "novidades"]
+    },
+    {
+      "id": 17,
+      "nome": "Calça Jeans (Tam. 48)",
+      "precoAntigo": "-",
+      "precoNovo": "R$ 40,00",
+      "imagem": "/images/products/calca-jeans-48.jpg",
+      "categorias": ["roupas"]
+    },
+    {
+      "id": 18,
+      "nome": "Papete Branca (Tam. 38)",
+      "precoAntigo": "-",
+      "precoNovo": "R$ 40,00",
+      "imagem": "/images/products/papete-38.jpg",
+      "categorias": ["calçados"]
+    },
+    {
+      "id": 19,
+      "nome": "Body Blogueira Colors",
+      "precoAntigo": "50,00",
+      "precoNovo": "R$ 30,00",
+      "imagem": "/images/products/body-blogueira.jpg",
+      "categorias": ["roupas", "sazonal", "novidades"]
+    },
+    {
+      "id": 20,
+      "nome": "Colar Infantil",
+      "precoAntigo": "-",
+      "precoNovo": "R$ 12,00",
+      "imagem": "/images/products/colar-infantil.jpg",
+      "categorias": ["acessórios"]
     }
   ]
   
