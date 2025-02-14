@@ -1,10 +1,10 @@
 [
     {
       "id": 1,
-      "nome": "Bota Caterpillar Masculina",
-      "precoAntigo": "R$ 299,00",
-      "precoNovo": "R$ 130,00",
-      "imagem": "/images/products/bota-caterpillar.jpg",
+      "nome": "Calçados Variados (Tam. 38)",
+      "precoAntigo": "R$ 50,00",
+      "precoNovo": "R$ 20,00",
+      "imagem": "/images/products/calcados-variados.jpg",
       "categorias": ["calçados", "promoções"]
     },
     {
@@ -17,18 +17,18 @@
     },
     {
       "id": 3,
-      "nome": "Camiseta do São Paulo",
+      "nome": "Jaleco Branco Simples",
       "precoAntigo": "-",
-      "precoNovo": "R$ 120,00",
-      "imagem": "/images/products/camiseta-sao-paulo.jpg",
+      "precoNovo": "R$ 30,00",
+      "imagem": "/images/products/jaleco-branco.jpg",
       "categorias": ["roupas", "novidades"]
     },
     {
       "id": 4,
-      "nome": "Calça Jeans Rutra",
+      "nome": "Short Social (Tam. M)",
       "precoAntigo": "-",
-      "precoNovo": "R$ 150,00",
-      "imagem": "/images/products/calca-jeans-rutra.jpg",
+      "precoNovo": "R$ 25,00",
+      "imagem": "/images/products/short-social.jpg",
       "categorias": ["roupas", "novidades"]
     },
     {
@@ -62,6 +62,38 @@
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/bolsa-baladinha.jpg",
       "categorias": ["acessórios", "promoções"]
+    },
+    {
+      "id": 9,
+      "nome": "Bota Melissa",
+      "precoAntigo": "55,00",
+      "precoNovo": "R$ 20,00",
+      "imagem": "/images/products/bota-melissa.jpg",
+      "categorias": ["calçados", "sazonal"]
+    },
+    {
+      "id": 10,
+      "nome": "Saia de Carnaval Preta",
+      "precoAntigo": "25,00",
+      "precoNovo": "R$ 20,00",
+      "imagem": "/images/products/saia-carnaval.jpg",
+      "categorias": ["roupas", "sazonal"]
+    },
+    {
+      "id": 11,
+      "nome": "Bota Infantil Preta",
+      "precoAntigo": "35,00",
+      "precoNovo": "R$ 20,00",
+      "imagem": "/images/products/bota-infantil-preta.jpg",
+      "categorias": ["calçados", "sazonal"]
+    },
+    {
+      "id": 12,
+      "nome": "Havaiana Infantil",
+      "precoAntigo": "35,00",
+      "precoNovo": "R$ 20,00",
+      "imagem": "/images/products/havaiana-infantil.jpg",
+      "categorias": ["calçados", "novidades"]
     }
   ]
   
