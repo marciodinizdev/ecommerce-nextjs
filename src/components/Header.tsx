@@ -49,7 +49,7 @@ export default function Header() {
       <div className="w-full flex justify-center mb-4">
         <div className="w-full max-w-[1300px] px-4 mt-3 flex justify-between items-center">
           <Link href="/" className="mb-1 text-xl font-bold text-gray-800">
-            <Image src="/logo.png" alt="Logo" width={150} height={0} />
+            <Image src="/images/icons/logo.png" alt="Logo" width={150} height={0} />
           </Link>
 
           {/* Barra de pesquisa */}

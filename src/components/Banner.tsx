@@ -38,7 +38,7 @@ export default function Banner() {
           <Link href="sejavendedor" className="info-left flex flex-col w-[1300px] gap-3">
             <div className="font-bold bg-gray-100 text-white p-3 flex items-center justify-around text-sm sm:text-base h-full">
               <div className="flex items-center gap-3 font-bold  text-myred">
-                <Image src="/vendedor.png" alt="Seja vendedor" width={25} height={0} />
+                <Image src="/images/icons/vendedor.png" alt="Seja vendedor" width={25} height={0} />
                 <div className="flex flex-col text-sm leading-tight">
                   <span className="font-bold text-myred">VENDA CONOSCO</span>
                   <span className="text-gray-800 font-thin">Bora desapegar?</span>
@@ -52,7 +52,7 @@ export default function Banner() {
           <Link href="seguranca" className="info-center flex flex-col w-[1300px] gap-3">
             <div className="font-bold bg-gray-100 text-white p-3 flex items-center justify-around text-sm sm:text-base h-full">
               <div className="flex items-center gap-3">
-                <Image src="/seguranca.png" alt="Transações seguras" width={30} height={0} />
+                <Image src="/images/icons/seguranca.png" alt="Transações seguras" width={30} height={0} />
                 <div className="flex flex-col text-sm leading-tight">
                   <span className="font-bold text-myred">TRANSAÇÃO SEGURA</span>
                   <span className="text-gray-800 font-thin">Rígida política de segurança</span>
@@ -67,7 +67,7 @@ export default function Banner() {
             <div className="font-bold bg-gray-100 text-white p-3 flex items-center justify-around text-sm sm:text-base h-full">
 
               <div className="flex items- gap-3 font-bold  text-myred">
-                <Image src="/devolucao.png" alt="Devolução grátis" width={30} height={0} />
+                <Image src="/images/icons/devolucao.png" alt="Devolução grátis" width={30} height={0} />
                 <div className="flex flex-col text-sm leading-tight">
                   <span className="font-bold text-myred">DEVOLUÇÃO GRÁTIS</span>
                   <span className="text-gray-800 font-thin">Leia nossos termos</span>
@@ -86,14 +86,14 @@ export default function Banner() {
           {/* Banner Esquerda */}
           <Link href="/promocao-sazonal" className="banner-left flex flex-col w-[350px] gap-3">
             <div className="overflow-hidden w-[350px] h-[292] font-bold bg-purple-100 text-white rounded-lg  flex items-center justify-center text-sm sm:text-base">
-              <Image className="object-cover w-full h-full rounded-lg" src="/oferta-sazonal.png" alt="Oferta sazonal" width={350} height={200} />
+              <Image className="object-cover w-full h-full rounded-lg" src="/images/banners/oferta-sazonal.png" alt="Oferta sazonal" width={350} height={200} />
             </div>
           </Link>
 
           {/* Banner Central */}
           <Link href={bannerLinks[currentBanner - 1]} className="bg-white bg-cover bg-center flex items-center justify-center w-[600px] h-auto"> 
             <Image
-              src={`/banner${currentBanner}.png`} // Variando entre 1, 2 e 3
+              src={`/images/banners/banner${currentBanner}.png`} // Variando entre 1, 2 e 3
               alt={`Banner ${currentBanner}`} // Para ajudar a verificar qual banner está sendo exibido
               width={700}
               height={200}

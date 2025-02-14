@@ -9,7 +9,7 @@ export default function Footer() {
           <Link href="/">
             <Image
               className="logo"
-              src="/logo2.png"
+              src="/images/icons/logo2.png"
               alt="Logo ATX Tech"
               width={150}
               height={50}
