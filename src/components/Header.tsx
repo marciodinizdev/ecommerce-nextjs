@@ -85,7 +85,7 @@ export default function Header() {
         <div className="w-full max-w-[1300px] flex items-center justify-between px-4 mb-4">
           {canScrollLeft && (
             <button
-              className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition mr-2"
+              className="bg-white p-2 rounded-full shadow-md hover:bg-slate-100 transition mr-2"
               onClick={() => scrollNav("left")}
             >
               <ChevronLeft size={24} />
@@ -122,7 +122,7 @@ export default function Header() {
 
           {canScrollRight && (
             <button
-              className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition ml-2"
+              className="bg-white p-2 rounded-full shadow-md hover:bg-slate-100 transition ml-2"
               onClick={() => scrollNav("right")}
             >
               <ChevronRight size={24} />

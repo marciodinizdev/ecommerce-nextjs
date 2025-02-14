@@ -36,7 +36,7 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="grid grid-cols-4 gap-5 min-w-[1300px] w-full max-w-6xl mb-12">
+      <div className="bg-slate-100 p-5 grid grid-cols-4 gap-5 min-w-[1300px] w-full max-w-6xl mb-12">
         {produtos.length === 0 ? (
           <p>Carregando produtos...</p>
         ) : (
