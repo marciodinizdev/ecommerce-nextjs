@@ -58,8 +58,10 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
               {/* Nome e preços */}
               <div className="flex flex-col items-center space-y-2 flex-grow">
                 <h2 className="text-lg font-semibold text-center">{produto.nome}</h2>
-                <p className="text-gray-500 line-through">{produto.precoAntigo}</p>
-                <p className="text-xl font-bold text-myred">{produto.precoNovo}</p>
+                <div className="flex items-center space-x-2">
+                  <span className="text-slate-500 line-through">{produto.precoAntigo}</span>
+                  <span className="text-xl font-bold text-myred">{produto.precoNovo}</span>
+                </div>
               </div>
 
               {/* Botão de compra mais centralizado */}

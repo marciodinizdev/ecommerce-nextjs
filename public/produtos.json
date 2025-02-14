@@ -10,7 +10,7 @@
     {
       "id": 2,
       "nome": "Moletom Colegial Sailor Moon",
-      "precoAntigo": "-",
+      "precoAntigo": "",
       "precoNovo": "R$ 69,00",
       "imagem": "/images/products/moletom-colegial-sailor-moon.jpg",
       "categorias": ["roupas"]
@@ -18,7 +18,7 @@
     {
       "id": 3,
       "nome": "Jaleco Branco Simples",
-      "precoAntigo": "-",
+      "precoAntigo": "",
       "precoNovo": "R$ 30,00",
       "imagem": "/images/products/jaleco-branco.jpg",
       "categorias": ["roupas", "novidades"]
@@ -26,7 +26,7 @@
     {
       "id": 4,
       "nome": "Short Social (Tam. M)",
-      "precoAntigo": "-",
+      "precoAntigo": "",
       "precoNovo": "R$ 25,00",
       "imagem": "/images/products/short-social.jpg",
       "categorias": ["roupas", "novidades"]
@@ -106,7 +106,7 @@
     {
       "id": 14,
       "nome": "Vestido Florido (Tam. GG)",
-      "precoAntigo": "-",
+      "precoAntigo": "",
       "precoNovo": "R$ 15,00",
       "imagem": "/images/products/vestido-florido-gg.jpg",
       "categorias": ["roupas", "novidades"]
@@ -114,7 +114,7 @@
     {
       "id": 15,
       "nome": "Sapatinho de Crochê (Tam. 14)",
-      "precoAntigo": "-",
+      "precoAntigo": "",
       "precoNovo": "R$ 25,00",
       "imagem": "/images/products/sapatinho-croche.jpg",
       "categorias": ["calçados", "novidades"]
@@ -130,7 +130,7 @@
     {
       "id": 17,
       "nome": "Calça Jeans (Tam. 48)",
-      "precoAntigo": "-",
+      "precoAntigo": "",
       "precoNovo": "R$ 40,00",
       "imagem": "/images/products/calca-jeans-48.jpg",
       "categorias": ["roupas"]
@@ -138,7 +138,7 @@
     {
       "id": 18,
       "nome": "Papete Branca (Tam. 38)",
-      "precoAntigo": "-",
+      "precoAntigo": "",
       "precoNovo": "R$ 40,00",
       "imagem": "/images/products/papete-38.jpg",
       "categorias": ["calçados"]
@@ -154,7 +154,7 @@
     {
       "id": 20,
       "nome": "Colar Infantil",
-      "precoAntigo": "-",
+      "precoAntigo": "",
       "precoNovo": "R$ 12,00",
       "imagem": "/images/products/colar-infantil.jpg",
       "categorias": ["acessórios"]
