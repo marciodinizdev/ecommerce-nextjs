@@ -47,11 +47,17 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
               className="bg-white border pb-6 shadow-md flex flex-col items-center hover:shadow-lg hover:border-myred transition"
             >
               {/* Imagem ocupando a parte superior */}
-              <div className="w-full mb-4">
+              <div className="w-full mb-4 relative">
+                {/* Selo de OFERTA (só aparece se precoAntigo não for vazio) */}
+                {produto.precoAntigo && (
+                  <div className="absolute bottom-2 left-2 bg-red-600 text-white text-md font-bold px-3 py-1 rounded">
+                    OFERTA🔥
+                  </div>
+                )}
                 <img
                   src={produto.imagem}
                   alt={produto.nome}
-                  className="w-full h-60 object-cover "
+                  className="w-full h-60 object-cover"
                 />
               </div>
 
@@ -59,7 +65,9 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
               <div className="flex flex-col items-center space-y-2 flex-grow">
                 <h2 className="text-lg font-semibold text-center">{produto.nome}</h2>
                 <div className="flex items-center space-x-2">
-                  <span className="text-slate-500 line-through">{produto.precoAntigo}</span>
+                  {produto.precoAntigo && (
+                    <span className="text-slate-500 line-through">{produto.precoAntigo}</span>
+                  )}
                   <span className="text-xl font-bold text-myred">{produto.precoNovo}</span>
                 </div>
               </div>

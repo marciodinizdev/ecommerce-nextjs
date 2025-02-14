@@ -42,7 +42,7 @@
     {
       "id": 6,
       "nome": "Salto Vizzano Onçinha",
-      "precoAntigo": "R$ 99,00",
+      "precoAntigo": "",
       "precoNovo": "R$ 50,00",
       "imagem": "/images/products/salto-vizzano-oncinha.jpg",
       "categorias": ["calçados"]
@@ -50,7 +50,7 @@
     {
       "id": 7,
       "nome": "Máquina de Cabelo Mondial",
-      "precoAntigo": "R$ 99,00",
+      "precoAntigo": "",
       "precoNovo": "R$ 50,00",
       "imagem": "/images/products/maquina-cabelo-mondial.jpg",
       "categorias": ["acessórios", "novidades"]
@@ -82,7 +82,7 @@
     {
       "id": 11,
       "nome": "Bota Infantil Preta",
-      "precoAntigo": "35,00",
+      "precoAntigo": "",
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/bota-infantil-preta.jpg",
       "categorias": ["calçados"]
@@ -90,7 +90,7 @@
     {
       "id": 12,
       "nome": "Havaiana Infantil",
-      "precoAntigo": "35,00",
+      "precoAntigo": "",
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/havaiana-infantil.jpg",
       "categorias": ["calçados", "novidades"]
