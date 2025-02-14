@@ -1,9 +1,16 @@
 "use client";
 
-import Link from 'next/link';
-import { ShoppingCart, Search, User, Heart, Headphones, ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
-import { useRef, useState, useEffect } from 'react';
+import Link from "next/link";
+import {
+  Search,
+  User,
+  Heart,
+  Headphones,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import Image from "next/image";
+import { useRef, useState, useEffect } from "react";
 
 export default function Header() {
   const navRef = useRef<HTMLDivElement>(null);
@@ -13,7 +20,9 @@ export default function Header() {
   const updateScrollButtons = () => {
     if (navRef.current) {
       setCanScrollLeft(navRef.current.scrollLeft > 0);
-      setCanScrollRight(navRef.current.scrollLeft < navRef.current.scrollWidth - navRef.current.clientWidth);
+      setCanScrollRight(
+        navRef.current.scrollLeft < navRef.current.scrollWidth - navRef.current.clientWidth
+      );
     }
   };
 
@@ -28,19 +37,22 @@ export default function Header() {
     if (navRef.current) {
       const scrollAmount = 150;
       navRef.current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
-      
+
       setTimeout(updateScrollButtons, 300);
     }
   };
 
   return (
-    <header className="bg-white drop-shadow-md flex flex-col w-full">
-      <div className="head-sup px-10 mt-3">
-        <div className="flex items-center justify-between w-full">
+    <header className="bg-white drop-shadow-sm w-full">
+
+      {/* Cabeçalho superior */}
+      <div className="w-full flex justify-center mb-4">
+        <div className="w-full max-w-[1300px] px-4 mt-3 flex justify-between items-center">
           <Link href="/" className="mb-1 text-xl font-bold text-gray-800">
             <Image src="/logo.png" alt="Logo" width={150} height={0} />
           </Link>
 
+          {/* Barra de pesquisa */}
           <div className="relative flex flex-1 mx-6 max-w-lg">
             <input
               type="text"
@@ -52,11 +64,12 @@ export default function Header() {
             </button>
           </div>
 
+          {/* Botões de navegação */}
           <div className="flex items-center space-x-6">
             <Link href="/login">
               <User className="text-black hover:text-gray-500" />
             </Link>
-            
+
             <Link href="/favoritos">
               <Heart className="text-black hover:text-gray-500" />
             </Link>
@@ -67,38 +80,55 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="head-inf relative bg-white p-3 flex items-center justify-center">
-        {canScrollLeft && (
-          <button 
-            className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition mr-2"
-            onClick={() => scrollNav("left")}
-          >
-            <ChevronLeft size={24} />
-          </button>
-        )}
+      {/* Barra de navegação */}
+      <div className="bg-white w-full flex justify-center">
+        <div className="w-full max-w-[1300px] flex items-center justify-between px-4 mb-4">
+          {canScrollLeft && (
+            <button
+              className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition mr-2"
+              onClick={() => scrollNav("left")}
+            >
+              <ChevronLeft size={24} />
+            </button>
+          )}
 
-        <nav 
-          ref={navRef} 
-          className="flex space-x-6 overflow-x-auto no-scrollbar whitespace-nowrap px-4 scroll-smooth w-full max-w-[90vw] justify-center"
-          onScroll={updateScrollButtons}
-        >
-          <Link href="/novidades" className="text-black hover:text-gray-500">Novidades</Link>
-          <Link href="/promocoes" className="text-black hover:text-gray-500">Promoções</Link>
-          <Link href="/masculino" className="text-black hover:text-gray-500">Roupas masculinas</Link>
-          <Link href="/feminino" className="text-black hover:text-gray-500">Roupas femininas</Link>
-          <Link href="/infantil" className="text-black hover:text-gray-500">Infantil</Link>
-          <Link href="/sapatos" className="text-black hover:text-gray-500">Sapatos</Link>
-          <Link href="/acessorios" className="text-black hover:text-gray-500">Acessórios</Link>
-        </nav>
-
-        {canScrollRight && (
-          <button 
-            className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition ml-2"
-            onClick={() => scrollNav("right")}
+          <nav
+            ref={navRef}
+            className="flex space-x-6 overflow-x-auto no-scrollbar whitespace-nowrap scroll-smooth w-full max-w-[90vw] justify-center"
+            onScroll={updateScrollButtons}
           >
-            <ChevronRight size={24} />
-          </button>
-        )}
+            <Link href="/novidades" className="text-black hover:text-gray-500">
+              Novidades
+            </Link>
+            <Link href="/promocoes" className="text-black hover:text-gray-500">
+              Promoções
+            </Link>
+            <Link href="/roupas" className="text-black hover:text-gray-500">
+              Roupas
+            </Link>
+            <Link href="/calcados" className="text-black hover:text-gray-500">
+              Calçados
+            </Link>
+            <Link href="/acessorios" className="text-black hover:text-gray-500">
+              Acessórios
+            </Link>
+            <Link href="/promocao-sazonal" className="text-black hover:text-gray-500">
+              Ofertas especiais
+            </Link>
+            <Link href="/sejavendedor" className="text-black hover:text-gray-500">
+              Desapegue
+            </Link>
+          </nav>
+
+          {canScrollRight && (
+            <button
+              className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition ml-2"
+              onClick={() => scrollNav("right")}
+            >
+              <ChevronRight size={24} />
+            </button>
+          )}
+        </div>
       </div>
     </header>
   );

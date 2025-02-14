@@ -46,6 +46,22 @@
       "precoNovo": "R$ 50,00",
       "imagem": "/images/products/salto-vizzano-oncinha.jpg",
       "categorias": ["calçados"]
+    },
+    {
+      "id": 7,
+      "nome": "Máquina de Cabelo Mondial",
+      "precoAntigo": "R$ 99,00",
+      "precoNovo": "R$ 50,00",
+      "imagem": "/images/products/maquina-cabelo-mondial.jpg",
+      "categorias": ["acessórios", "novidades"]
+    },
+    {
+      "id": 8,
+      "nome": "Bolsa Baladinha",
+      "precoAntigo": "39,00",
+      "precoNovo": "R$ 20,00",
+      "imagem": "/images/products/bolsa-baladinha.jpg",
+      "categorias": ["acessórios", "promoções"]
     }
   ]
   
