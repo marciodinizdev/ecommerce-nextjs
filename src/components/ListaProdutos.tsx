@@ -44,7 +44,7 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
             <Link
               href={`/produto/${produto.id}`}
               key={produto.id}
-              className="bg-white border pb-6 shadow-md flex flex-col items-center hover:shadow-lg hover:border-myred transition"
+              className="bg-white border-2 pb-6 shadow-md flex flex-col items-center hover:shadow-2xl hover:border-myred transition"
             >
               {/* Imagem ocupando a parte superior */}
               <div className="w-full mb-4 relative">

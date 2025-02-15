@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Search,
   User,
@@ -13,6 +14,7 @@ import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 export default function Header() {
+  const pathname = usePathname(); // Obtém a rota atual
   const navRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -44,7 +46,6 @@ export default function Header() {
 
   return (
     <header className="bg-white drop-shadow-sm w-full">
-
       {/* Cabeçalho superior */}
       <div className="w-full flex justify-center mb-4">
         <div className="w-full max-w-[1300px] px-4 mt-3 flex justify-between items-center">
@@ -69,7 +70,6 @@ export default function Header() {
             <Link href="/login">
               <User className="text-black hover:text-gray-500" />
             </Link>
-
             <Link href="/favoritos">
               <Heart className="text-black hover:text-gray-500" />
             </Link>
@@ -97,27 +97,25 @@ export default function Header() {
             className="flex space-x-6 overflow-x-auto no-scrollbar whitespace-nowrap scroll-smooth w-full max-w-[90vw] justify-center"
             onScroll={updateScrollButtons}
           >
-            <Link href="/novidades" className="text-black hover:text-gray-500">
-              Novidades
-            </Link>
-            <Link href="/promocoes" className="text-black hover:text-gray-500">
-              Promoções
-            </Link>
-            <Link href="/roupas" className="text-black hover:text-gray-500">
-              Roupas
-            </Link>
-            <Link href="/calcados" className="text-black hover:text-gray-500">
-              Calçados
-            </Link>
-            <Link href="/acessorios" className="text-black hover:text-gray-500">
-              Acessórios
-            </Link>
-            <Link href="/promocao-sazonal" className="text-black hover:text-gray-500">
-              Ofertas especiais
-            </Link>
-            <Link href="/sejavendedor" className="text-black hover:text-gray-500">
-              Desapegue
-            </Link>
+            {[
+              { name: "Novidades", path: "/novidades" },
+              { name: "Promoções", path: "/promocoes" },
+              { name: "Roupas", path: "/roupas" },
+              { name: "Calçados", path: "/calcados" },
+              { name: "Acessórios", path: "/acessorios" },
+              { name: "Ofertas especiais", path: "/promocao-sazonal" },
+              { name: "Desapegue", path: "/sejavendedor" },
+            ].map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={` ${
+                  pathname === item.path ? "text-myred font-bold" : "text-black hover:text-slate-500"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
 
           {canScrollRight && (
