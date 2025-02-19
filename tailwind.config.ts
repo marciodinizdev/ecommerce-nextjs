@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         myred: "var(--myred)",
+        destaque: "var(--destaque)",
       },
       
     },fontFamily: {

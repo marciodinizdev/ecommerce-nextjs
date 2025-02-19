@@ -5,7 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #191919;
-  --myred: #F75560;
+  /* --myred: #9462FF; */
+  --myred: #F95458;
+  --destaque: #9462FF;
 }
 
 * {
@@ -36,7 +38,7 @@ body {
 }
 
 .footer a {
-  color: #F75560;
+  color: var(--myred);
   text-decoration: none;
   font-weight: bold;
 }

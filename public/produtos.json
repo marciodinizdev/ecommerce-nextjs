@@ -5,7 +5,7 @@
       "precoAntigo": "R$ 50,00",
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/calcados-variados.jpg",
-      "categorias": ["calçados", "promoções"]
+      "categorias": ["calçados", "promoção"]
     },
     {
       "id": 2,
@@ -37,7 +37,7 @@
       "precoAntigo": "R$ 55,00",
       "precoNovo": "R$ 25,00",
       "imagem": "/images/products/camisa-florida.jpg",
-      "categorias": ["roupas", "promoções"]
+      "categorias": ["roupas", "promoção"]
     },
     {
       "id": 6,
@@ -61,7 +61,7 @@
       "precoAntigo": "39,00",
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/bolsa-baladinha.jpg",
-      "categorias": ["acessórios", "promoções"]
+      "categorias": ["acessórios", "promoção"]
     },
     {
       "id": 9,
@@ -101,7 +101,7 @@
       "precoAntigo": "35,00",
       "precoNovo": "R$ 25,00",
       "imagem": "/images/products/sandalia-menino.jpg",
-      "categorias": ["calçados", "promoções"]
+      "categorias": ["calçados", "promoção"]
     },
     {
       "id": 14,

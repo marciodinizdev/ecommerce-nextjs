@@ -36,7 +36,7 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="bg-slate-100 p-5 grid grid-cols-4 gap-5 min-w-[1300px] w-full max-w-6xl mb-12">
+      <div className="bg-slate-100 shadow-md p-5 grid grid-cols-4 gap-5 min-w-[1300px] w-full max-w-6xl mb-12">
         {produtos.length === 0 ? (
           <p>Carregando produtos...</p>
         ) : (
@@ -50,7 +50,7 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
               <div className="w-full mb-4 relative">
                 {/* Selo de OFERTA (só aparece se precoAntigo não for vazio) */}
                 {produto.precoAntigo && (
-                  <div className="absolute bottom-2 left-2 bg-red-600 text-white text-md font-bold px-3 py-1 rounded">
+                  <div className="absolute bottom-2 left-2 bg-destaque text-white text-md font-bold px-3 py-1 rounded">
                     OFERTA🔥
                   </div>
                 )}
