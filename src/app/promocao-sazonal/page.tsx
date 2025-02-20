@@ -7,7 +7,7 @@ export default function PromocaoSazonal() {
 
       {/* Banner Sazonal com Vídeo */}
       <video 
-        src="/sazonal/banner-sazonal.mp4" 
+        src="/images/sazonal/banner-sazonal.mp4" 
         autoPlay 
         loop 
         muted 
