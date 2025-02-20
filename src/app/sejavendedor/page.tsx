@@ -108,7 +108,7 @@ export default function SejaVendedor() {
                         <option value="Acessórios">Acessórios</option>
                     </select>
 
-                    <button type="submit" className="font-bold text-xl w-full bg-myred text-white p-4">
+                    <button type="submit" className="font-bold text-xl w-full bg-myred text-white p-4 hover:bg-red-700 transition ease-in-out rounded-md">
                         Adicionar Produto
                     </button>
                 </form>
