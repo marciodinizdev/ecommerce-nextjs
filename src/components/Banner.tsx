@@ -24,7 +24,7 @@ export default function Banner() {
   const bannerLinks = [
     "/novidades",
     "/promocoes",
-    "/vender",
+    "/sejavendedor",
   ];
 
   return (
@@ -113,7 +113,7 @@ export default function Banner() {
             </Link>
 
             {/* Banner Cupons */}
-            <Link href="/cupons" className="flex-1 bg-[#FFCA02] text-[#9D0C94] rounded-lg p-3 flex flex-col items-center justify-center sm:text-base h-full">
+            <Link href="/cupons" className="flex-1 bg-[#FFCA02] text-destaque rounded-lg p-3 flex flex-col items-center justify-center sm:text-base h-full">
               <span>OFERTAS INCRÍVEIS COM</span>
               <span className="font-bold">CUPONS DE DESCONTO EXCLUSIVOS!</span>
             </Link>
