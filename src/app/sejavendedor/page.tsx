@@ -5,15 +5,29 @@ import { useState } from 'react';
 export default function SejaVendedor() {
     const [formData, setFormData] = useState({
         nome: '',
-        precoAntigo: '',
-        precoNovo: '',
+        preco: '',
         imagem: null as string | null,
         categoria: 'Roupas', // Valor padrão do select
     });
 
+    const formatCurrency = (value: string) => {
+        // Remove tudo que não for número
+        const onlyNumbers = value.replace(/\D/g, '');
+
+        // Converte para centavos e depois formata corretamente
+        const floatValue = parseFloat(onlyNumbers) / 100;
+        return floatValue.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    };
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = event.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+
+        if (name === 'preco') {
+            const formattedValue = formatCurrency(value);
+            setFormData((prev) => ({ ...prev, [name]: formattedValue }));
+        } else {
+            setFormData((prev) => ({ ...prev, [name]: value }));
+        }
     };
 
     const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,10 +45,9 @@ export default function SejaVendedor() {
         event.preventDefault();
 
         const newProduct = {
-            id: crypto.randomUUID(), // Gera um ID único
+            id: crypto.randomUUID(),
             nome: formData.nome,
-            precoAntigo: parseFloat(formData.precoAntigo) || 0,
-            precoNovo: parseFloat(formData.precoNovo) || 0,
+            preco: parseFloat(formData.preco.replace(/\./g, '').replace(',', '.')) || 0,
             imagem: formData.imagem || '',
             categoria: formData.categoria,
         };
@@ -47,7 +60,7 @@ export default function SejaVendedor() {
 
         if (response.ok) {
             alert('Produto adicionado com sucesso!');
-            setFormData({ nome: '', precoAntigo: '', precoNovo: '', imagem: null, categoria: 'Roupas' });
+            setFormData({ nome: '', preco: '', imagem: null, categoria: 'Roupas' });
         } else {
             alert('Erro ao adicionar produto.');
         }
@@ -57,7 +70,9 @@ export default function SejaVendedor() {
         <main className="flex flex-col items-center p-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-6">Desapegue!</h1>
             <p className="text-xl mb-5">Tem algum produto sobrando? Venda com a gente!</p>
-            <p className="text-md mb-12 text-myred italic text-center bg-slate-100 p-5 rounded-md w-[600px]">Atenção! Estamos passando por instabilidades em nosso servidor, portanto não estamos adicionando produtos novos no momento</p>
+            <p className="text-md mb-12 text-myred italic text-center bg-slate-100 p-5 rounded-md w-[600px]">
+                Atenção! Estamos passando por instabilidades em nosso servidor, portanto não estamos adicionando produtos novos no momento
+            </p>
             <div className="max-w-lg mx-auto mb-12 p-6 bg-white shadow-md rounded-lg">
                 <h1 className="text-xl font-bold mb-4">Adicione um Produto</h1>
                 <form onSubmit={handleSubmit} className="space-y-4 text-[1.1rem]">
@@ -70,18 +85,17 @@ export default function SejaVendedor() {
                         className="w-full p-2 border rounded"
                         required
                     />
-                    
+
                     <input
-                        type="number"
-                        name="precoNovo"
+                        type="text"
+                        name="preco"
                         placeholder="Preço"
-                        value={formData.precoNovo}
+                        value={formData.preco}
                         onChange={handleChange}
                         className="w-full p-2 border rounded"
                         required
                     />
 
-                    {/* Input para carregar imagem */}
                     <input
                         type="file"
                         accept="image/*"
@@ -90,12 +104,10 @@ export default function SejaVendedor() {
                         required
                     />
 
-                    {/* Exibir imagem carregada */}
                     {formData.imagem && (
                         <img src={formData.imagem} alt="Prévia da Imagem" className="mt-4 w-full rounded-lg shadow-md" />
                     )}
 
-                    {/* Select para categorias */}
                     <select
                         name="categoria"
                         value={formData.categoria}
