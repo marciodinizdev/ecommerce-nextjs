@@ -36,7 +36,7 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="bg-slate-100 shadow-md p-5 grid grid-cols-4 gap-5 min-w-[1300px] w-full max-w-6xl mb-12">
+      <div className="bg-slate-100 shadow-md p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full max-w-6xl mb-12">
         {produtos.length === 0 ? (
           <p>Carregando produtos...</p>
         ) : (
@@ -57,12 +57,12 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
                 <img
                   src={produto.imagem}
                   alt={produto.nome}
-                  className="w-full h-60 object-cover"
+                  className="w-full h-48 sm:h-60 object-cover"
                 />
               </div>
 
               {/* Nome e preços */}
-              <div className="flex flex-col items-center space-y-2 flex-grow">
+              <div className="flex flex-col items-center space-y-2 flex-grow px-2">
                 <h2 className="text-lg font-semibold text-center">{produto.nome}</h2>
                 <div className="flex items-center space-x-2">
                   {produto.precoAntigo && (

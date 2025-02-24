@@ -41,13 +41,30 @@ export default function Header() {
     <header className="bg-white drop-shadow-sm w-full">
       {/* Cabeçalho superior */}
       <div className="w-full flex justify-center mb-4">
-        <div className="w-full max-w-[1300px] px-4 mt-3 flex justify-between items-center">
-          <Link href="/" className="mb-1 text-xl font-bold text-gray-800">
-            <Image src="/images/icons/logo.png" alt="Logo" width={150} height={0} />
-          </Link>
+        <div className="w-full max-w-[1300px] px-4 mt-3 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+          {/* Logo e Ícones (alinhados em linha no mobile, mas separados no desktop) */}
+          <div className="w-full md:w-auto flex justify-between items-center">
+            {/* Logo */}
+            <Link href="/" className="mb-1 text-xl font-bold text-gray-800">
+              <Image src="/images/icons/logo.png" alt="Logo" width={150} height={0} />
+            </Link>
 
-          {/* Barra de pesquisa */}
-          <div className="relative flex flex-1 mx-6 max-w-lg">
+            {/* Links para Instagram, E-mail e Suporte (visíveis no mobile) */}
+            <div className="flex items-center space-x-6 md:hidden">
+              <Link href="https://www.instagram.com/barraclosetpb" target="_blank">
+                <Instagram className="text-black hover:text-gray-500" />
+              </Link>
+              <Link href="mailto:contato@barracloset.com">
+                <Mail className="text-black hover:text-gray-500" />
+              </Link>
+              <Link href="/suporte">
+                <Headphones className="text-black hover:text-gray-500" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Barra de pesquisa (abaixo do logo e ícones no mobile, ao lado no desktop) */}
+          <div className="relative flex flex-1 w-full md:max-w-lg mx-0 md:mx-6">
             <input
               type="text"
               placeholder="Buscar produtos..."
@@ -58,8 +75,8 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Links para Instagram e E-mail */}
-          <div className="flex items-center space-x-6">
+          {/* Links para Instagram, E-mail e Suporte (ocultos no mobile, visíveis no desktop) */}
+          <div className="hidden md:flex items-center space-x-6">
             <Link href="https://www.instagram.com/barraclosetpb" target="_blank">
               <Instagram className="text-black hover:text-gray-500" />
             </Link>
@@ -76,15 +93,17 @@ export default function Header() {
       {/* Barra de navegação */}
       <div className="bg-white w-full flex justify-center">
         <div className="w-full max-w-[1300px] flex items-center justify-between px-4 mb-4">
+          {/* Botão de rolagem à esquerda (oculto em mobile) */}
           {canScrollLeft && (
             <button
-              className="bg-white p-2 rounded-full shadow-md hover:bg-slate-100 transition mr-2"
+              className="hidden md:block bg-white p-2 rounded-full shadow-md hover:bg-slate-100 transition mr-2"
               onClick={() => scrollNav("left")}
             >
               <ChevronLeft size={24} />
             </button>
           )}
 
+          {/* Navegação */}
           <nav
             ref={navRef}
             className="flex space-x-6 overflow-x-auto no-scrollbar whitespace-nowrap scroll-smooth w-full max-w-[90vw] justify-center"
@@ -102,7 +121,7 @@ export default function Header() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={` ${
+                className={`text-sm md:text-base ${
                   pathname === item.path ? "text-myred font-bold" : "text-black hover:text-slate-500"
                 }`}
               >
@@ -111,9 +130,10 @@ export default function Header() {
             ))}
           </nav>
 
+          {/* Botão de rolagem à direita (oculto em mobile) */}
           {canScrollRight && (
             <button
-              className="bg-white p-2 rounded-full shadow-md hover:bg-slate-100 transition ml-2"
+              className="hidden md:block bg-white p-2 rounded-full shadow-md hover:bg-slate-100 transition ml-2"
               onClick={() => scrollNav("right")}
             >
               <ChevronRight size={24} />
