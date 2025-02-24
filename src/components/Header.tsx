@@ -1,20 +1,13 @@
-"use client";
+'use client';
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Search,
-  User,
-  Heart,
-  Headphones,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Search, Instagram, Mail, Headphones, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 export default function Header() {
-  const pathname = usePathname(); // Obtém a rota atual
+  const pathname = usePathname();
   const navRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -65,13 +58,13 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Botões de navegação */}
+          {/* Links para Instagram e E-mail */}
           <div className="flex items-center space-x-6">
-            <Link href="/login">
-              <User className="text-black hover:text-gray-500" />
+            <Link href="https://www.instagram.com/barraclosetpb" target="_blank">
+              <Instagram className="text-black hover:text-gray-500" />
             </Link>
-            <Link href="/favoritos">
-              <Heart className="text-black hover:text-gray-500" />
+            <Link href="mailto:contato@barracloset.com">
+              <Mail className="text-black hover:text-gray-500" />
             </Link>
             <Link href="/suporte">
               <Headphones className="text-black hover:text-gray-500" />
