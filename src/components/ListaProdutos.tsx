@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -54,10 +55,12 @@ export default function ListaProdutos({ categoria }: { categoria?: string }) {
                     OFERTA🔥
                   </div>
                 )}
-                <img
+                <Image
                   src={produto.imagem}
                   alt={produto.nome}
                   className="w-full h-48 sm:h-60 object-cover"
+                  width={500} // Defina um tamanho adequado 
+                  height={300} 
                 />
               </div>
 

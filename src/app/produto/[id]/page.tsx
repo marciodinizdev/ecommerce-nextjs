@@ -15,16 +15,34 @@ const avaliacoes = [
   "A loja tem ótimos preços e um atendimento excelente. Superou minhas expectativas!"
 ];
 
-async function getProduto(id: string) {
+async function getProduto(id: string | undefined) {
+  if (!id) return null; // Evita erro se `id` for undefined
+
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/produtos.json`);
   if (!res.ok) throw new Error("Falha ao carregar os produtos");
 
-  const produtos = await res.json();
-  return produtos.find((p: any) => p.id === Number(id));
+  interface Produto {
+    id: number;
+    nome: string;
+    precoNovo: string;
+    precoAntigo?: string;
+    imagem: string;
+    categorias: string[];
+  }
+  
+  const produtos: Produto[] = await res.json();
+  return produtos.find((p) => p.id === Number(id));
+  
 }
 
-export default async function ProdutoPage({ params }: { params: { id: string } }) {
-  const produto = await getProduto(params.id);
+export default async function ProdutoPage({ params }: { params: Promise<{ id?: string }> }) {
+  const { id } = await params;
+
+  if (!id) {
+    return notFound();
+  }
+
+  const produto = await getProduto(id);
 
   if (!produto) {
     return notFound();
@@ -87,7 +105,7 @@ export default async function ProdutoPage({ params }: { params: { id: string } }
             <h3 className="text-lg font-bold text-gray-700">Avaliações dos Clientes</h3>
             <p className="text-yellow-500 text-xl mt-2">⭐⭐⭐⭐☆ (4.5 de 5)</p>
             <p className="text-gray-600 italic mt-2">
-              "{avaliacaoAleatoria}"
+              {avaliacaoAleatoria}
             </p>
           </div>
 

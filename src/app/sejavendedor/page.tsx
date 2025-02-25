@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function SejaVendedor() {
@@ -105,7 +106,7 @@ export default function SejaVendedor() {
                     />
 
                     {formData.imagem && (
-                        <img src={formData.imagem} alt="Prévia da Imagem" className="mt-4 w-full rounded-lg shadow-md" />
+                        <Image src={formData.imagem} alt="Prévia da Imagem" className="mt-4 w-full rounded-lg shadow-md" />
                     )}
 
                     <select

@@ -6,7 +6,7 @@ export default function Devolução() {
           Nossa política de devolução permite que você devolva os produtos em até 7 dias após o recebimento. Se não estiver satisfeito com a sua compra, basta seguir os passos abaixo para abrir um chamado de devolução:
         </p>
         <ul className="text-lg text-gray-700 mb-6 text-center">
-          <li>1. Entre em contato conosco através da seção de "Abertura de Chamado".</li>
+          <li>1. Entre em contato conosco através da seção de Abertura de Chamado.</li>
           <li>2. Informe o motivo da devolução e os detalhes do produto.</li>
           <li>3. Aguardamos a confirmação do processo de devolução, que será gerido de forma rápida e eficiente.</li>
         </ul>
