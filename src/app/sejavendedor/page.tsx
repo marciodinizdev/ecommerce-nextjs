@@ -70,7 +70,7 @@ export default function SejaVendedor() {
         <main className="flex flex-col items-center p-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-6">Desapegue!</h1>
             <p className="text-xl mb-5">Tem algum produto sobrando? Venda com a gente!</p>
-            <p className="text-md mb-12 text-myred italic text-center bg-slate-100 p-5 rounded-md w-[600px]">
+            <p className="text-md mb-12 text-myred italic text-center bg-slate-100 p-3 sm:p-5 rounded-md sm:w-[600px]">
                 Atenção! Estamos passando por instabilidades em nosso servidor, portanto não estamos adicionando produtos novos no momento
             </p>
             <div className="max-w-lg mx-auto mb-12 p-6 bg-white shadow-md rounded-lg">

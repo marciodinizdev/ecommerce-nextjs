@@ -46,13 +46,15 @@ export default async function ProdutoPage({ params }: { params: { id: string } }
                 OFERTA🔥
               </div>
             )}
-            <Image 
-              src={produto.imagem} 
-              alt={produto.nome} 
-              width={600} 
-              height={600} 
-              className="w-[500px] h-[600px] object-cover rounded-lg shadow-lg"
-            />
+            <div className="aspect-square w-full md:aspect-auto md:h-[600px]">
+              <Image 
+                src={produto.imagem} 
+                alt={produto.nome} 
+                width={600} 
+                height={600} 
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
 
