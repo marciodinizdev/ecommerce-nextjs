@@ -96,7 +96,7 @@ export default function Banner() {
           <div className="flex flex-col md:w-[350px] gap-3">
 
             {/* Banner App */}
-            <Link href="/app" className="bg-myred rounded-lg p-3 flex flex-col justify-center items-center gap-3 text-sm md:text-base h-full">
+            <Link href="/aplicativo" className="bg-myred rounded-lg p-3 flex flex-col justify-center items-center gap-3 text-sm md:text-base h-full">
               <span className="text-white">Baixe o nosso APP</span>
               <div className="w-[200px] h-[50px] flex justify-center bg-white text-myred text-xl font-bold items-center rounded-3xl">
                 Baixar APP

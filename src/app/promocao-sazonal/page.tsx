@@ -12,7 +12,7 @@ export default function PromocaoSazonal() {
         loop 
         muted 
         playsInline 
-        className="w-[1300px] max-w-[1300px] rounded-lg mb-6"
+        className="w-[1300px] rounded-lg mb-6"
       />
 
       <ListaProdutos categoria="sazonal" />
