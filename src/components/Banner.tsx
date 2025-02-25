@@ -26,14 +26,14 @@ export default function Banner() {
 
       {/* Infos (Mobile por padrão, Desktop em md:flex) */}
       <div className="flex flex-col md:flex-row justify-center">
-        <div className="flex flex-col md:flex-row gap-2 md:gap-1 justify-center w-full md:w-[1300px] mx-auto">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-1 justify-center w-full md:w-[1300px] mx-auto ">
 
           {/* Info esquerda */}
           <Link href="sejavendedor" className="info-left w-full md:w-1/3">
-            <div className="font-bold bg-slate-100 text-white p-3 flex items-center justify-around text-sm md:text-base h-full">
+            <div className="font-bold bg-slate-100 p-3 flex items-start md:justify-around text-sm md:text-base h-full rounded-lg shadow-sm">
               <div className="flex items-center gap-3 font-bold text-myred">
-                <Image src="/images/icons/vendedor.png" alt="Seja vendedor" width={25} height={0} />
-                <div className="flex flex-col text-sm leading-tight">
+                <Image src="/images/icons/vendedor.png" alt="Seja vendedor" width={25} height={0} className="w-8 h-8" />
+                <div className="flex flex-col text-sm leading-tight ">
                   <span className="font-bold text-myred">VENDA CONOSCO</span>
                   <span className="text-gray-800 font-thin">Bora desapegar?</span>
                 </div>
@@ -43,9 +43,9 @@ export default function Banner() {
 
           {/* Info central */}
           <Link href="seguranca" className="info-center w-full md:w-1/3">
-            <div className="font-bold bg-slate-100 text-white p-3 flex items-center justify-around text-sm md:text-base h-full">
+            <div className="font-bold bg-slate-100 text-white p-3 flex items-start md:justify-around text-sm md:text-base h-full rounded-lg shadow-sm">
               <div className="flex items-center gap-3">
-                <Image src="/images/icons/seguranca.png" alt="Transações seguras" width={30} height={0} />
+                <Image src="/images/icons/seguranca.png" alt="Transações seguras" width={30} height={0} className="w-8 h-8" />
                 <div className="flex flex-col text-sm leading-tight">
                   <span className="font-bold text-myred">TRANSAÇÃO SEGURA</span>
                   <span className="text-gray-800 font-thin">Rígida política de segurança</span>
@@ -56,9 +56,9 @@ export default function Banner() {
 
           {/* Info direita */}
           <Link href="devolucao" className="info-right w-full md:w-1/3">
-            <div className="font-bold bg-slate-100 text-white p-3 flex items-center justify-around text-sm md:text-base h-full">
+            <div className="font-bold bg-slate-100 text-white p-3 flex items-start md:justify-around text-sm md:text-base h-full rounded-lg shadow-sm">
               <div className="flex items-center gap-3 font-bold text-myred">
-                <Image src="/images/icons/devolucao.png" alt="Devolução grátis" width={30} height={0} />
+                <Image src="/images/icons/devolucao.png" alt="Devolução grátis" width={30} height={0} className="w-8 h-8" />
                 <div className="flex flex-col text-sm leading-tight">
                   <span className="font-bold text-myred">DEVOLUÇÃO GRÁTIS</span>
                   <span className="text-gray-800 font-thin">Leia nossos termos</span>
@@ -96,7 +96,7 @@ export default function Banner() {
           <div className="flex flex-col md:w-[350px] gap-3">
 
             {/* Banner App */}
-            <Link href="/aplicativo" className="bg-myred rounded-lg p-3 flex flex-col justify-center items-center gap-3 text-sm md:text-base h-full">
+            <Link href="/aplicativo" className="bg-myred rounded-lg p-3 flex flex-col justify-center items-center gap-3 text-sm md:text-base h-[150px] sm:h-full">
               <span className="text-white">Baixe o nosso APP</span>
               <div className="w-[200px] h-[50px] flex justify-center bg-white text-myred text-xl font-bold items-center rounded-3xl">
                 Baixar APP
@@ -104,7 +104,7 @@ export default function Banner() {
             </Link>
 
             {/* Banner Cupons */}
-            <Link href="/cupons" className="bg-[#FFCA02] text-destaque rounded-lg p-3 flex flex-col items-center justify-center text-sm md:text-base h-full">
+            <Link href="/cupons" className="bg-[#FFCA02] text-destaque rounded-lg p-3 flex flex-col items-center justify-center text-sm md:text-base h-[150px] sm:h-full">
               <span>OFERTAS INCRÍVEIS COM</span>
               <span className="font-bold">CUPONS DE DESCONTO EXCLUSIVOS!</span>
             </Link>
