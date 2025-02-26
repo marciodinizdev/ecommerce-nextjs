@@ -42,7 +42,7 @@ export default function Header() {
       {/* Cabeçalho superior */}
       <div className="w-full flex justify-center mb-4">
         <div className="w-full max-w-[1300px] px-4 mt-3 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-          {/* Logo e Ícones (alinhados em linha no mobile, mas separados no desktop) */}
+          {/* Logo e Ícones */}
           <div className="w-full md:w-auto flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="mb-1 text-xl font-bold text-gray-800">
@@ -63,7 +63,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Barra de pesquisa (abaixo do logo e ícones no mobile, ao lado no desktop) */}
+          {/* Barra de pesquisa */}
           <div className="relative flex flex-1 w-full md:max-w-lg mx-0 md:mx-6">
             <input
               type="text"
@@ -106,7 +106,7 @@ export default function Header() {
           {/* Navegação */}
           <nav
             ref={navRef}
-            className="flex space-x-6 overflow-x-auto no-scrollbar whitespace-nowrap scroll-smooth w-full max-w-[90vw] justify-center"
+            className="flex space-x-6 overflow-x-auto no-scrollbar whitespace-nowrap scroll-smooth w-full px-4 md:px-0 justify-start md:justify-center"
             onScroll={updateScrollButtons}
           >
             {[
