@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Barra Closet | Brechó Comunitário",
   description: "Brechó comunitário de roupas usadas e novas",
   icons: {
-    icon: "/favicon.png",
+    icon: "/images/icons/favicon.png",
   },
 };
 
