@@ -18,7 +18,10 @@ const avaliacoes = [
 async function getProduto(id: string | undefined) {
   if (!id) return null; // Evita erro se `id` for undefined
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/produtos.json`);
+  const res = await fetch("/produtos.json", {
+    cache: "no-store"
+  });
+  
   if (!res.ok) throw new Error("Falha ao carregar os produtos");
 
   interface Produto {
