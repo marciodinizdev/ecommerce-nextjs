@@ -15,23 +15,25 @@ const avaliacoes = [
   "A loja tem ótimos preços e um atendimento excelente. Superou minhas expectativas!"
 ];
 
-import produtos from "@/../public/produtos.json"; // ajuste o caminho se necessário
-
-interface Produto {
-  id: number;
-  nome: string;
-  precoNovo: string;
-  precoAntigo?: string;
-  imagem: string;
-  categorias: string[];
-}
-
 async function getProduto(id: string | undefined) {
   if (!id) return null; // Evita erro se `id` for undefined
 
-  return produtos.find((p) => p.id === Number(id)) || null;
-}
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/produtos.json`);
+  if (!res.ok) throw new Error("Falha ao carregar os produtos");
 
+  interface Produto {
+    id: number;
+    nome: string;
+    precoNovo: string;
+    precoAntigo?: string;
+    imagem: string;
+    categorias: string[];
+  }
+  
+  const produtos: Produto[] = await res.json();
+  return produtos.find((p) => p.id === Number(id));
+  
+}
 
 export default async function ProdutoPage({ params }: { params: Promise<{ id?: string }> }) {
   const { id } = await params;
