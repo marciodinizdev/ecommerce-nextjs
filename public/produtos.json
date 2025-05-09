@@ -146,7 +146,7 @@
     {
       "id": 19,
       "nome": "Body Blogueira Colors",
-      "precoAntigo": "50,00",
+      "precoAntigo": "R$ 50,00",
       "precoNovo": "R$ 30,00",
       "imagem": "/images/products/body-blogueira.jpg",
       "categorias": ["roupas", "sazonal", "novidades"]
