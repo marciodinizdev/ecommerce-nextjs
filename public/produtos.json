@@ -58,7 +58,7 @@
     {
       "id": 8,
       "nome": "Bolsa Baladinha",
-      "precoAntigo": "39,00",
+      "precoAntigo": "R$ 39,00",
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/bolsa-baladinha.jpg",
       "categorias": ["acessórios", "promoção"]
@@ -66,7 +66,7 @@
     {
       "id": 9,
       "nome": "Bota Melissa",
-      "precoAntigo": "55,00",
+      "precoAntigo": "R$ 55,00",
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/bota-melissa.jpg",
       "categorias": ["calçados", "sazonal"]
@@ -74,7 +74,7 @@
     {
       "id": 10,
       "nome": "Saia de Carnaval Preta",
-      "precoAntigo": "25,00",
+      "precoAntigo": "R$ 25,00",
       "precoNovo": "R$ 20,00",
       "imagem": "/images/products/saia-carnaval.jpg",
       "categorias": ["roupas", "sazonal"]
@@ -98,7 +98,7 @@
     {
       "id": 13,
       "nome": "Sandália Infantil (Tam. 33)",
-      "precoAntigo": "35,00",
+      "precoAntigo": "R$ 35,00",
       "precoNovo": "R$ 25,00",
       "imagem": "/images/products/sandalia-menino.jpg",
       "categorias": ["calçados", "promoção"]
@@ -122,7 +122,7 @@
     {
       "id": 16,
       "nome": "Tiara Maria Bonita",
-      "precoAntigo": "50,00",
+      "precoAntigo": "R$ 50,00",
       "precoNovo": "R$ 25,00",
       "imagem": "/images/products/tiara-maria-bonita.jpg",
       "categorias": ["acessórios", "sazonal", "novidades"]
