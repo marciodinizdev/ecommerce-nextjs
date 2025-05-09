@@ -17,7 +17,7 @@ export default function Suporte() {
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
 
-        const response = await fetch('/api/suporte', {
+        const response = await fetch('/suporte', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData),
